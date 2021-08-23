@@ -1,0 +1,41 @@
+html {
+    background-color: #EEE2DC;
+    font-family: monospace;
+}
+
+html:not() {
+    padding-left: 10em;
+}
+
+h1 {
+    color: #BAB2B5;
+    background-color: #123C69;
+    margin: -10px -10px 0px -10px;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #AC3B61;
+    padding-left: 4em;
+}
+
+h4 {
+    color: #123C69;
+    padding-left: 5em;
+}
+
+a {
+    color: #123C69;
+    text-decoration: none;
+    padding-left: 5em;
+}
+
+ul {
+    padding-left: 8em;
+}
+
+img {
+    width: 35%;
+    padding-left: 5em;
+}
