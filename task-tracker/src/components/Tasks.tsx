@@ -1,32 +1,17 @@
-type task = {id: number, text: string, day: string, reminder: boolean}
+import ITask from "./Interfaces"
+import Task from "./Task"
 
-let taskList: task[] = [
-    {
-        id: 1,
-        text: 'Doctors Appointment',
-        day: 'Feb 5',
-        reminder: true
-      },
-      {
-        id: 2,
-        text: 'Meeting At School',
-        day: 'Feb 6',
-        reminder: true
-      },
-      {
-        id: 3,
-        text: 'Food Shopping',
-        day: 'Feb 7',
-        reminder: true
-      }
-]
+interface TasksProps {
+    tasks: ITask[],
+    onDelete: (id: number) => void;
+}
 
-function Tasks() {
-  return (
-    <div>
-        {taskList.map((t: task) => (<h3>{t.text}</h3>))}
-    </div>
-  )
+function Tasks({tasks, onDelete}: TasksProps) {
+    return (
+        <div>
+            {tasks.map( (task, index) => <Task key={task.id} task={task} onDelete={onDelete}/>)}
+        </div>
+    )
 }
 
 export default Tasks
